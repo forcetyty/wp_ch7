@@ -3,27 +3,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<style type="text/css">
+
+div {
+	border : 1px solid #ccc;
+	height: 500;
+}
+</style>
 <script type="text/javascript">
-	$( function() {
-		/* 코드를 완성하세요 */
-		setTimeout(function(){
-			$("strong, p")
-				.wrapAll("<div>")
-				.parent()
-				.css({
-					border: "1px solid #ccc",
-					width: 200
-				});
+	$(function() {
+
+		setTimeout(function() {
+			$("strong, p").wrapAll("<div>") // 모든걸 div로 감싸라
+			.parent().css({ 
+				// strong과 p는 
+				//css는 위에 있는 css가 적용되는 것이 아니라
+				//여기에 있는 css가 적용이 된다.
+				border : "1px solid #ccc",
+				width : 200
+			});
 		}, 2000);
-		
-	} );  
+
+	});
 </script>
 </head>
 <body>
-
-
-<strong>타이틀입니다.</strong>
-<p>내용입니다.</p>
-
+	<div>저는 곧 바뀌어요</div>
+	<strong>타이틀입니다.</strong>
+	<p>내용입니다.</p>
+	
 </body>
 </html>
